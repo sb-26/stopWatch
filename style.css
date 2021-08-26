@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body{
+    background: #f7a1c6;
+}
+
+
+div{
+    margin-top:10%;
+    margin-left: 40%;
+    padding: 25px;
+    display: inline-block;
+    border: 1px solid orange;
+    border-radius: 20px;
+    background: #FFC1F1;
+}
+
+
+div h1{
+    text-align: center;
+    padding: 20px;
+    color:#006080;
+}
+
+
+
+div button{
+    padding: 5px;
+    background-color: #dac5f7;
+    border-radius: 5px;
+    margin: 5px;
+    color: white;
+    font-size: 1rem;
+    border: 1px solid orange;
+}
+
+
+div button:hover{
+    background-color : #9096e6;
+}
