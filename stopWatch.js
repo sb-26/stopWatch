@@ -16,7 +16,7 @@ start.addEventListener("click", function(){
     startWatch = setInterval(function(){
         output.innerHTML=min+" : "+sec;
         sec++;
-        if(sec==59){
+        if(sec==60){
             min++;
             sec=0;
         }
