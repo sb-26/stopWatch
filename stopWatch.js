@@ -8,24 +8,28 @@ var reset = document.getElementsByClassName("reset-button")[0];
 
 var sec = 1;
 var min = 0;
-
+var isAlreadyStarted = false;
 var startWatch;
 
 //start stop-watch
 start.addEventListener("click", function(){
-    startWatch = setInterval(function(){
+    if(!isAlreadyStarted){
+        isAlreadyStarted=true;
+        startWatch = setInterval(function(){
         output.innerHTML=min+" : "+sec;
         sec++;
-        if(sec==60){
-            min++;
-            sec=0;
-        }
-    },1000);
+            if(sec==60){
+                min++;
+                sec=0;
+            }
+        },1000);
+    }
 });
 
 //stop stop-watch
 stop.addEventListener("click", function(){
     clearInterval(startWatch);
+    isAlreadyStarted=false;
 });
 
 //reset stop-watch
@@ -34,4 +38,5 @@ reset.addEventListener("click", function(){
     clearInterval(startWatch);
     sec=1;
     min=0;
+    isAlreadyStarted=false;
 });
